@@ -1,6 +1,6 @@
-# The Repository contains the qualification task for Json Schema GSOC 2024
+# Json Schema GSOC 2024 Qualification Task Solution
 
-Welcome to the Json Schema GSOC 2024 Qualification Task repository! This project addresses the compilation issues in the CorvusQualification project by updating the ExistingLibrary. Additionally, it involves creating a NuGet package for ExistingLibrary, enabling users to utilize ServiceProvider and the generated attribute in the CorvusQualification project and UserCode project.
+Welcome to the Json Schema GSOC 2024 Qualification Task solution repository! This project addresses compilation issues in the CorvusQualification project by updating the ExistingLibrary. The main goals include enhancing the ExistingLibrary to generate a missing attribute, enabling smooth referencing in the CorvusQualification project, and creating a NuGet package for broader usability.
 
 ## Task Accomplishments
 
@@ -21,7 +21,8 @@ Add Project Reference:
 1. Include a project reference to ExistingLibrary with the following entry:
 
 ```xml
-<ProjectReference Include="..\JsonSchema.GSoC2024.ExistingLibrary\JsonSchema.GSoC2024.ExistingLibrary.csproj" OutputItemType="Analyzer" />
+<ProjectReference Include="..\JsonSchema.GSoC2024.ExistingLibrary\JsonSchema.GSoC2024.ExistingLibrary.csproj"
+                  OutputItemType="Analyzer" />
 
 ```
 
