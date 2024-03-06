@@ -29,10 +29,10 @@ Add Project Reference:
 
 ### Package reference
 
-- Follow this [link]()
+- Follow this [link](JsonSchema.GSoC2024.CorvusQualification/JsonSchema.GSoC2024.ExistingLibrary/Readme.md)
 
 ### Learning and References
 
-- Refer to the learning.md document attached, where I've documented my learning and references used to complete this task, including the creation of the source code generator.
+- Refer to the [learning.md](Learning.md) document attached, where I've documented my learning and references used to complete this task, including the creation of the source code generator.
 
-> [Task link ]()
+> [Task link ](https://github.com/json-schema-org/community/issues/614)
