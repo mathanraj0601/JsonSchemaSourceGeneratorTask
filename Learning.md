@@ -95,3 +95,5 @@
 - [Source Generators Cookbook](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md#package-a-generator-as-a-nuget-package)
 
 - [NuGet documentation](https://learn.microsoft.com/en-us/nuget/)
+
+-[.NET Assembly-Level Attributes](https://www.youtube.com/watch?v=noxNMji-DRw)
