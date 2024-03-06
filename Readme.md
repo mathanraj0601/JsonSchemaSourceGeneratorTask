@@ -21,7 +21,8 @@ Add Project Reference:
 1. Include a project reference to ExistingLibrary with the following entry:
 
 ```xml
-<ProjectReference Include="..\JsonSchema.GSoC2024.ExistingLibrary\JsonSchema.GSoC2024.ExistingLibrary.csproj" OutputItemType="Analyzer" />
+<ProjectReference Include="..\JsonSchema.GSoC2024.ExistingLibrary\JsonSchema.GSoC2024.ExistingLibrary.csproj"
+                  OutputItemType="Analyzer" />
 
 ```
 
