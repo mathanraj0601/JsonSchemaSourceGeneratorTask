@@ -1,6 +1,6 @@
 # Json Schema GSOC 2024 Qualification Task Solution
 
-Welcome to the Json Schema GSOC 2024 Qualification Task solution repository! This project addresses compilation issues in the CorvusQualification project by updating the ExistingLibrary. The main goals include enhancing the ExistingLibrary to generate a missing attribute, enabling smooth referencing in the CorvusQualification project, and creating a NuGet package for broader usability.
+Welcome to the JSON Schema GSOC 2024 Qualification Task solution repository! This project addresses compilation issues in the CorvusQualification project by updating the ExistingLibrary. The main goals include enhancing the ExistingLibrary to generate a missing attribute, enabling smooth referencing in the CorvusQualification project, and creating a NuGet package for broader usability.
 
 ## Task Accomplishments
 
@@ -8,13 +8,13 @@ Welcome to the Json Schema GSOC 2024 Qualification Task solution repository! Thi
 - The CorvusQualification project successfully references the ExistingLibrary as a project reference.
 - A NuGet package for ExistingLibrary has been generated and is being referenced by the UserCode project.
 
-## Existing library usage in other project
+## Existing library usage in another project
 
 ### Project Reference
 
 Add Project Reference:
 
-1. dotnet restore : to get all dependencies
+1. dotnet restore: to get all dependencies
 
 1. Open the project file of the target project (e.g., CorvusQualification).
 
