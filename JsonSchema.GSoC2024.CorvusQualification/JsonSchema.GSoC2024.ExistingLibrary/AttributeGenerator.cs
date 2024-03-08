@@ -13,41 +13,24 @@ namespace JsonSchema.GSoC2024.ExistingLibrary
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
             var provider = context.SyntaxProvider.CreateSyntaxProvider(
-                predicate: (c, _) => c is ArgumentListSyntax,
-                transform: (n, _) => (ArgumentListSyntax)n.Node)
+                predicate: (c, _) => c is AttributeSyntax,
+                transform: (n, _) => (AttributeSyntax)n.Node)
                 .Where(m => m is not null);
 
             var compilation = context.CompilationProvider.Combine(provider.Collect());
 
-            context.RegisterSourceOutput(compilation, (spc, source) => Execute(spc, source.Left));
+            context.RegisterSourceOutput(compilation, Execute);
         }
-        private void Execute(SourceProductionContext context, Compilation compilation)
+
+        private void Execute(SourceProductionContext context, (Compilation Left, ImmutableArray<AttributeSyntax> Right) tuple)
         {
+            var (compilation, list) = tuple;
 
-            const string ATTRIBUTENAME = "GeneratedAttribute";
-            bool isAttributeDeclared = false;
-            foreach (var syntaxTree in compilation.SyntaxTrees)
+            foreach (var item in list)
             {
-                var root = syntaxTree.GetRoot();
-                var attributeNodes = root.DescendantNodes().OfType<AttributeSyntax>();
-
-                foreach (var attributeNode in attributeNodes)
+                if (item.Name.ToString() == "GeneratedAttribute")
                 {
-                    // Get the type name of the attribute
-                    var attributeName = attributeNode.Name.ToString();
-
-                    if (attributeName == ATTRIBUTENAME)
-                    {
-                        isAttributeDeclared = true;
-                        break;
-                    }
-                }
-              
-            }
-
-            if (isAttributeDeclared)
-            {
-                var code = """
+                    var code = """
 
                         //auto-generated
 
@@ -68,11 +51,15 @@ namespace JsonSchema.GSoC2024.ExistingLibrary
                                 public global::System.String Qualification { get; }
                             }
                         }
-              
+             
                         """;
-                context.AddSource("GenerateAttribute.g.cs", code);
+                    context.AddSource("GeneratedAttribute.g.cs", code);
+                    return;
+                }
+
             }
 
         }
     }
 }
+
