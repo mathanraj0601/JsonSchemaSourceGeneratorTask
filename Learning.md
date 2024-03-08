@@ -10,7 +10,7 @@
 
 ## Source Code generator
 
-- Usually, we write code to generate code of another format. For example, we write Java or JavaScript code and then convert it into machine code.
+- Usually, we write code to generate code of another format. For example, we write Java or JavaScript code and then transpile it into machine code.
 
 - .NET allows us to generate C# code from existing C# code, which is called a source code generator.
 
@@ -23,7 +23,7 @@
 
 ## Roslyn
 
-- A .NET compiler platform (Open box) that allows developers to see what is happening during compilation, unlike a normal compiler, which is like a closed box. We provide source code as input, and it produces a common intermediate language as output, with developers having no access to any compiler activities.
+- A .NET compiler platform (Open box) that allows developers to see what is happening during compilation, Unlike a typical compiler, which functions as a closed box. We provide source code as input, and it produces a common intermediate language as output, with developers having no access to any compiler activities.
 
 - Roslyn, being an open box, enables developers to access different processes in the compilation pipeline by providing
   an API for each process. This capability aids in building source code generators, code refactoring, intellisense, etc.
@@ -48,7 +48,7 @@
 
 ## Reflection
 
-- Reflection helps to inspect and obtain information about types, classes, methods, etc.
+- Reflection helps inspect and obtain information about types, classes, methods, and more
 
 - It aids in binding a value or invoking a method in an assembly, and it is mostly used in JSON serialization and deserialization.
 
@@ -56,7 +56,7 @@
 
 ## Attributes
 
-- It Helps to query type based on attributes
+- Attributes assist in querying types based on their attributes.
   
 - Attribute helps us to provide metadata to types, classes, methods, etc.,
   
@@ -66,7 +66,7 @@
 
 - The Roslyn NuGet package provides an interface named incremental source generator for code generation.
 
-- In a class library project, when used as a reference in another project, ensure proper referencing.
+- In a class library project, when used as a reference in another project, Ensure proper referencing when using it as a reference in a class library project.
 
 - Utilize the Roslyn API to analyze the code (syntax tree) during source code generation.
 
