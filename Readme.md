@@ -28,9 +28,51 @@ Add Project Reference:
 
 4.  build and run the project (optional) use ctrl+click on generatedAttribute to navigate to the generated code
 
-### Package reference
+### Package Reference
 
-- Follow this [link](JsonSchema.GSoC2024.CorvusQualification/JsonSchema.GSoC2024.ExistingLibrary/Readme.md)
+To use this package, follow the steps in the [Readme](JsonSchema.GSoC2024.CorvusQualification/JsonSchema.GSoC2024.ExistingLibrary/Readme.md):
+
+#### Setting up a Local NuGet Package
+
+1. Package the NuGet package by navigating to the existing library folder:
+
+   ```bash
+   dotnet pack -c debug
+   ```
+
+2. Add a local source if not already present:
+
+   ```bash
+   dotnet nuget add source D:\local-nuget -n Local
+   ```
+
+3. Confirm the added source:
+
+   ```bash
+   dotnet nuget list source
+   ```
+
+4. Push the NuGet package to the local source (replace `<path-to-nuget-file>` with the actual path):
+
+   ```bash
+   dotnet nuget push "<path-to-nuget-file>" -s D:\local-nuget
+   ```
+
+   Example:
+
+   ```bash
+   dotnet nuget push "D:\Json Schema GSOC\JsonSchema.GSoC2024.CorvusQualification\JsonSchema.GSoC2024.ExistingLibrary\bin\Debug\JsonSchema.GSoC2024.ExistingLibrary.1.0.7.nupkg" -s "D:\local-nuget"
+   ```
+
+5. Use the package in another project (e.g., UserCode):
+
+   ```bash
+   dotnet add package JsonSchema.GSoC2024.ExistingLibrary --version 1.0.7 --source local-nuget-demo
+   ```
+
+> Note: The above steps can also be performed using the GUI in Visual Studio.
+
+Ensure you replace placeholders like `<path-to-nuget-file>` with the actual paths and version numbers as needed for your specific project.
 
 ### Learning and References
 
