@@ -1,4 +1,4 @@
-﻿using JsonSchema.GSoC2024.ExistingLibrary;
+﻿
+using JsonSchema.GSoC2024.ExistingPackage;
 
-
-[assembly: GeneratedAttribute("path/to/schema.json", "JsonSchema.GSoC2024.CorvusQualification")]
+[assembly: Generated("path/to/schema.json", "JsonSchema.GSoC2024.CorvusQualification")]

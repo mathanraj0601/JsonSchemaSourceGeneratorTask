@@ -6,12 +6,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
 	<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
-	<Title>JsonSchema.GSoC2024.ExistingLibrary</Title>
+	<Title>JsonSchema.GSoC2024.ExistingPackage</Title>
 	<Authors>Mathanraj T</Authors>
 	<Company>Json Schema</Company>
 	<Description>The package contains the task for GSOC 2024 qualification Task</Description>
 	<PackageReadmeFile>Readme.md</PackageReadmeFile>
-	<Version>1.0.7</Version>
+	<Version>1.0.1</Version>
 	<RepositoryUrl>https://github.com/mathanraj0601/JsonSchemaSourceGeneratorTask/tree/develop/JsonSchema.GSoC2024.CorvusQualification/JsonSchema.GSoC2024.ExistingLibrary</RepositoryUrl>
 	<PackageTags>attribute-generate; service-provider; </PackageTags>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
