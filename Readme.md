@@ -1,12 +1,12 @@
 # Json Schema GSOC 2024 Qualification Task Solution
 
-Welcome to the JSON Schema GSOC 2024 Qualification Task solution repository! This project addresses compilation issues in the CorvusQualification project by updating the ExistingLibrary. The main goals include enhancing the ExistingLibrary to generate a missing attribute, enabling smooth referencing in the CorvusQualification project, and creating a NuGet package for broader usability.
+Welcome to the JSON Schema GSOC 2024 Qualification Task solution repository! This project addresses compilation issues in the CorvusQualification project by updating the ExistingPackage. The main goals include enhancing the ExistingPackage to generate a missing attribute, enabling smooth referencing in the CorvusQualification project, and creating a NuGet package for broader usability.
 
 ## Task Accomplishments
 
-- ExistingLibrary is now capable of generating the missing attribute.
-- The CorvusQualification project successfully references the ExistingLibrary as a project reference.
-- A NuGet package for ExistingLibrary has been generated and is being referenced by the UserCode project.
+- ExistingPackage is now capable of generating the missing attribute.
+- The CorvusQualification project successfully references the ExistingPackage as a project reference.
+- A NuGet package for ExistingPackage has been generated and is being referenced by the UserCode project.
 
 ## Existing library usage in another project
 
@@ -18,19 +18,19 @@ Add Project Reference:
 
 1. Open the project file of the target project (e.g., CorvusQualification).
 
-1. Include a project reference to ExistingLibrary with the following entry:
+1. Include a project reference to ExistingPackage with the following entry:
 
 ```xml
-<ProjectReference Include="..\JsonSchema.GSoC2024.ExistingLibrary\JsonSchema.GSoC2024.ExistingLibrary.csproj"
+<ProjectReference Include="..\JsonSchema.GSoC2024.ExistingPackage\JsonSchema.GSoC2024.ExistingPackage.csproj"
                   OutputItemType="Analyzer" />
 
 ```
 
-4.  build and run the project (optional) use ctrl+click on generatedAttribute to navigate to the generated code
+4.  build and run the project (optional) use ctrl+click on generated to navigate to the generated code
 
 ### Package Reference
 
-To use this package, follow the steps in the [Readme](JsonSchema.GSoC2024.CorvusQualification/JsonSchema.GSoC2024.ExistingLibrary/Readme.md):
+To use this package, follow the steps in the [Readme](JsonSchema.GSoC2024.CorvusQualification/JsonSchema.GSoC2024.ExistingPackage/Readme.md):
 
 #### Setting up a Local NuGet Package
 
@@ -61,13 +61,13 @@ To use this package, follow the steps in the [Readme](JsonSchema.GSoC2024.Corvus
    Example:
 
    ```bash
-   dotnet nuget push "D:\Json Schema GSOC\JsonSchema.GSoC2024.CorvusQualification\JsonSchema.GSoC2024.ExistingLibrary\bin\Debug\JsonSchema.GSoC2024.ExistingLibrary.1.0.7.nupkg" -s "D:\local-nuget"
+   dotnet nuget push "D:\Json Schema GSOC\JsonSchema.GSoC2024.CorvusQualification\JsonSchema.GSoC2024.ExistingPackage\bin\Debug\JsonSchema.GSoC2024.ExistingPackage.1.0.0.nupkg" -s "D:\local-nuget"
    ```
 
 5. Use the package in another project (e.g., UserCode):
 
    ```bash
-   dotnet add package JsonSchema.GSoC2024.ExistingLibrary --version 1.0.7 --source local-nuget-demo
+   dotnet add package JsonSchema.GSoC2024.ExistingPackage --version 1.0.0 --source local-nuget-demo
    ```
 
 > Note: The above steps can also be performed using the GUI in Visual Studio.
