@@ -5,7 +5,7 @@ using System.Collections.Immutable;
 using System.Linq;
 
 
-namespace JsonSchema.GSoC2024.ExistingLibrary
+namespace JsonSchema.GSoC2024.ExistingPackage
 {
     [Generator]
     internal class AttributeGenerator : IIncrementalGenerator
@@ -28,19 +28,19 @@ namespace JsonSchema.GSoC2024.ExistingLibrary
 
             foreach (var item in list)
             {
-                if (item.Name.ToString() == "GeneratedAttribute")
+                if (item.Name.ToString() == "Generated")
                 {
                     var code = """
 
                         //auto-generated
 
                         using System;
-                        namespace JsonSchema.GSoC2024.ExistingLibrary
+                        namespace JsonSchema.GSoC2024.ExistingPackage
                         {
                             [AttributeUsage(AttributeTargets.Assembly, Inherited = false, AllowMultiple = false)]
-                            public class GeneratedAttributeAttribute : Attribute
+                            public class GeneratedAttribute : Attribute
                             {
-                                public GeneratedAttributeAttribute(global::System.String filePath, global::System.String qualification)
+                                public GeneratedAttribute(global::System.String filePath, global::System.String qualification)
                                 {
                                     // Constructor logic, if any
                                     FilePath = filePath;

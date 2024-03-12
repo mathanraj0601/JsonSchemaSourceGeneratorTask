@@ -17,7 +17,7 @@ using JsonSchema.GSoC2024.ExistingLibrary;
 2. Now, declare the generated attribute with two string parameters, where the first parameter is the path to a JSON schema file, and the second parameter is the namespace (JsonSchema.GSoC2024.CorvusQualification).below the namespace
 
 ```csharp
-[assembly: GeneratedAttribute("path/to/schema.json", "JsonSchema.GSoC2024.CorvusQualification")]
+[assembly: Generated("path/to/schema.json", "JsonSchema.GSoC2024.CorvusQualification")]
 ```
 
 As the attribute is assembly level it is recommended to use it in assembly info.cs in case of .net framework and create a separate file called assembly info.cs and use it in case of others
