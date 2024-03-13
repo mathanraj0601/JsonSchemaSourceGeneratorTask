@@ -1,17 +1,17 @@
-# ExistingLibrary NuGet Package - Usage Instructions
+# ExistingPackage NuGet Package - Usage Instructions
 
-This readme provides instructions on how to use the ExistingLibrary NuGet package, which includes a `GeneratedAttribute` and the `ServiceProvider` functionality.
+This readme provides instructions on how to use the ExistingPackage NuGet package, which includes a `GeneratedAttribute` and the `ServiceProvider` functionality.
 
 ## Usage in Your Project:
 
-- Now that the ExistingLibrary NuGet package is installed in your project, follow these steps to use the included features:
+- Now that the ExistingPackage NuGet package is installed in your project, follow these steps to use the included features:
 
 ### Declaring the `GeneratedAttribute`
 
 1. In your project, import the namespace where the generated attribute is used:
 
 ```csharp
-using JsonSchema.GSoC2024.ExistingLibrary;
+using JsonSchema.GSoC2024.ExistingPackage;
 ```
 
 2. Now, declare the generated attribute with two string parameters, where the first parameter is the path to a JSON schema file, and the second parameter is the namespace (JsonSchema.GSoC2024.CorvusQualification).below the namespace
@@ -46,7 +46,7 @@ After Successful declaration, you will notice an analyzer under dependencies
 - In your project, create an instance of the ServiceProvider class and use it as needed:
 
 ```csharp
-using JsonSchema.GSoC2024.ExistingLibrary;
+using JsonSchema.GSoC2024.ExistingPackage;
 
 namespace YourNamespace
 {
